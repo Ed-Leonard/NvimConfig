@@ -53,7 +53,7 @@ vim.o.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
---
+
 --  Notice listchars is set using `vim.opt` instead of `vim.o`.
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
@@ -911,6 +911,8 @@ vim.cmd 'colorscheme gruvbox'
 
 vim.api.nvim_set_keymap('v', '<LeftRelease>', '"*ygv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<2-LeftRelease>', '"*ygv', { noremap = true, silent = true })
+
+vim.o.scrolloff = 1000
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
